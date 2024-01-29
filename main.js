@@ -1,72 +1,51 @@
-const person = () => {
-    const randomNumber = Math.floor(Math.random()*5 + 1)
-
-    if (randomNumber === 1){
-        return `mother`
-    } else if (randomNumber === 2){
-        return 'father'
-    } else if (randomNumber === 3){
-        return 'nan'
-    } else if (randomNumber === 4){
-        return 'girlfriend'
-    } else if (randomNumber === 5){
-        return 'grandad'
-    }
-};
-
 const insult = () => {
-    const randomNumber = Math.floor(Math.random()*5 + 1)
-
-    if (randomNumber === 1){
-        return `fat`
-    } else if (randomNumber === 2){
-        return 'stupid'
-    } else if (randomNumber === 3){
-        return 'dumb'
-    } else if (randomNumber === 4){
-        return 'lazy'
-    } else if (randomNumber === 5){
-        return 'ugly'
-    }
+    const arr = ['Oui... you! ',
+    'Excuse me... ',
+    'Hey, over here! ',
+    'Oui! ']
+    const randomNumber = Math.floor(Math.random()*arr.length)
+    return arr[randomNumber]
 };
 
 
-const randomSentences = () => {
-    //const randomNumber = Math.floor(Math.random()*10 + 1)
-    const randomNumber = 1
-if (randomNumber === 1){
-    return `Your ${person()} is so ${insult()}`
-} else if (randomNumber === 2){
-    return 'You are number 2'
-} else if (randomNumber === 3){
-    return 'You are number 3'
-} else if (randomNumber === 4){
-    return 'You are number 4'
-} else if (randomNumber === 5){
-    return 'You are number 5'
-} else if (randomNumber === 6){
-    return 'You are number 6'
-} else if (randomNumber === 7){
-    return 'You are number 7'
-} else if (randomNumber === 8){
-    return 'You are number 8'
-} else if (randomNumber === 9){
-    return 'You are number 9'
-} else if (randomNumber === 10){
-    return 'You are number 10'
-} else {
-    console.log('not working')
+const sentences = () => {
+    const arr = ['Seeing you brings back memories... Of wanting my eyes gouged out!',
+    'You\'re funny and all but looks aren\'t everything.',
+    'I\'ve said it before and I\'ll say it again — I hate you.',
+    'Oh, I didn\'t notice you there. How d\'you like being so insignificant?',
+    'We could be best friends, if I liked people with an arse for a face!',
+    'Those are nice shoes, but don\'t you think your gran\'s feet are cold without them?!',
+    'You remind me of an old friend...He was a twat! Just like you!',
+    'You seem like a very nice person. I kill nice people, you know.',
+    'I like to think about puppies - about slowly, slowly crushing them.',
+    'Sure is a beautiful day... Except where you\'re standing!',
+    'I sensed your presence before you even arrived. What did you EAT?!']
+    const randomNumber = Math.floor(Math.random()*arr.length )
+    return arr[randomNumber];
+};
+
+const ending = () => {
+    const arr = [' HAHAHA!',
+    ' Burn!',
+    '    *crickets*']
+    const randomNumber = Math.floor(Math.random()*arr.length)
+    return arr[randomNumber]
+};
+
+const randomSentence = () => {
+    const newSentence = insult() + sentences() + ending();
+    return newSentence
 }
-}
+
 console .log('           ______     ');
 console .log('        .~`      `\\   ');
 console .log('       /         \\`\\  ')
 console .log('      /           \\ @  ')
 console .log('     |,------------|    ')
-console .log('     |  C ----0---0-\\     ___________________________________')
-console .log('     /   ,-.-   .__),\\   /                                   \\')
-console .log('    /~,         --    | <   ' + randomSentences())
-console .log('   /   \\-,           |   \\___________________________________/ ')
+console .log('     |  C ----0---0-\\     ______________________________________________________________________ ___ ___ _ __ _ _')
+console .log('     /   ,-.-   .__),\\   /                                                                          ')
+console .log('    /~,         --    | <   ' + randomSentence())
+console .log('   /   \\-,           |   \\_________________________________________________________________ ____ ___ ___ _ __ _ _ ')
 console .log('  |        \\,_,___,_ / \\      ')
 console .log('  ||   |               \\ ')
 console .log('  ||   |         __     |' )
